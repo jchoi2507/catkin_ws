@@ -30,15 +30,18 @@ int main(int argc, char** argv) {
 	ros::Rate rate(10); // 10 Hz
 
 	if (serialDeviceID == -1) {std::cerr << "Unable to open serial device." << std::endl; return 1;}
-	std_msgs::Char msg; // This var will store the serially transmitted char from the Nicla
+	char input; // This var will store the serially transmitted char from the Nicla
+	std_msgs::Char msg; // This var is the actual message being sent to the topic
 	bool keepReading = true; // This var determines when to stop reading from serial
 
 	while (ros::ok()) {
 		while (keepReading) {
 			if (serialDataAvail(serialDeviceID) > 0) {
-				msg.data = serialGetchar(serialDeviceID);
-				if (msg.data == '\n') {} // Terminating byte read, ignore current iteration
+				input = serialGetchar(serialDeviceID);
+				if (input == '\n') {} // Terminating byte read, ignore current iteration
 				else {
+					ROS_INFO("Message sending: %c", input);
+					msg.data = input;
 					keepReading = false;
 				}
 			}
