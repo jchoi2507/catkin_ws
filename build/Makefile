@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named RP2040_node1
+
+# Build rule for target.
+RP2040_node1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 RP2040_node1
+.PHONY : RP2040_node1
+
+# fast build rule for target.
+RP2040_node1/fast:
+	$(MAKE) -f robotic_quadruped_pkg/CMakeFiles/RP2040_node1.dir/build.make robotic_quadruped_pkg/CMakeFiles/RP2040_node1.dir/build
+.PHONY : RP2040_node1/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_py
 
 # Build rule for target.
@@ -428,17 +441,17 @@ rosgraph_msgs_generate_messages_eus/fast:
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named listener_node
+# Target rules for targets named RP2040_node2
 
 # Build rule for target.
-listener_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 listener_node
-.PHONY : listener_node
+RP2040_node2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 RP2040_node2
+.PHONY : RP2040_node2
 
 # fast build rule for target.
-listener_node/fast:
-	$(MAKE) -f robotic_quadruped_pkg/CMakeFiles/listener_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/listener_node.dir/build
-.PHONY : listener_node/fast
+RP2040_node2/fast:
+	$(MAKE) -f robotic_quadruped_pkg/CMakeFiles/RP2040_node2.dir/build.make robotic_quadruped_pkg/CMakeFiles/RP2040_node2.dir/build
+.PHONY : RP2040_node2/fast
 
 #=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_py
@@ -527,6 +540,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... RP2040_node1"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_cpp"
@@ -538,7 +552,7 @@ help:
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... listener_node"
+	@echo "... RP2040_node2"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_lisp"

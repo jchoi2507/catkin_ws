@@ -207,5 +207,8 @@ include_directories(
 add_executable(sender_node src/sender.cpp)
 target_link_libraries(sender_node ${catkin_LIBRARIES} -lwiringPi)
 
-add_executable(listener_node src/listener.cpp)
-target_link_libraries(listener_node ${catkin_LIBRARIES} -lwiringPi)
+add_executable(RP2040_node1 src/RP2040_node1.cpp)
+target_link_libraries(RP2040_node1 ${catkin_LIBRARIES} -lwiringPi)
+
+add_executable(RP2040_node2 src/RP2040_node2.cpp)
+target_link_libraries(RP2040_node2 ${catkin_LIBRARIES} -lwiringPi)
