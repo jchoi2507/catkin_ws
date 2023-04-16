@@ -324,6 +324,19 @@ std_msgs_generate_messages_nodejs/fast:
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named Nicla_node
+
+# Build rule for target.
+Nicla_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Nicla_node
+.PHONY : Nicla_node
+
+# fast build rule for target.
+Nicla_node/fast:
+	$(MAKE) -f robotic_quadruped_pkg/CMakeFiles/Nicla_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/Nicla_node.dir/build
+.PHONY : Nicla_node/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
 
 # Build rule for target.
@@ -374,19 +387,6 @@ roscpp_generate_messages_py: cmake_check_build_system
 roscpp_generate_messages_py/fast:
 	$(MAKE) -f robotic_quadruped_pkg/CMakeFiles/roscpp_generate_messages_py.dir/build.make robotic_quadruped_pkg/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named sender_node
-
-# Build rule for target.
-sender_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sender_node
-.PHONY : sender_node
-
-# fast build rule for target.
-sender_node/fast:
-	$(MAKE) -f robotic_quadruped_pkg/CMakeFiles/sender_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/sender_node.dir/build
-.PHONY : sender_node/fast
 
 #=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_cpp
@@ -543,11 +543,11 @@ help:
 	@echo "... RP2040_node1"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... Nicla_node"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_py"
-	@echo "... sender_node"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"

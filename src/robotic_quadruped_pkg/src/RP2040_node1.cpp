@@ -41,7 +41,7 @@ void callback(const std_msgs::CharConstPtr& msg) {
 
 int main(int argc, char** argv) {
 	/* ROS Subscriber Node Setup */
-	ros::init(argc, argv, "listener"); // Initialize node called "listener"
+	ros::init(argc, argv, "RP2040_node1"); // Initialize node called "RP2040_node1"
 	ros::NodeHandle node_handle;
 	ros::Subscriber subscriber = node_handle.subscribe("topic_actuate", 1, &callback); // Subscribe to "topic_actuate"
 

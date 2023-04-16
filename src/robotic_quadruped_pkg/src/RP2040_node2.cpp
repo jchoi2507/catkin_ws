@@ -19,7 +19,7 @@ Date: 4/15/2023
 using namespace std;
 
 /* Serial USB Connection to RP2040 Setup */
-const char *port_connection = "/dev/tty"; // Initialize RP2040 <-> RPi 4b USB port connection
+const char *port_connection = "/dev/tty[SOMETHING]"; // Initialize RP2040 <-> RPi 4b USB port connection
 				      	      // To figure this out, "clever stack overflow" trick: 1) BEFORE PLUGIN: ls -l /dev > dev.txt
 					      //                                                    2) AFTER PLUG IN: ls -l /dev > dev2.txt
 					      //                                                    3) Diff the two text files 
@@ -41,7 +41,7 @@ void callback(const std_msgs::CharConstPtr& msg) {
 
 int main(int argc, char** argv) {
 	/* ROS Subscriber Node Setup */
-	ros::init(argc, argv, "listener"); // Initialize node called "listener"
+	ros::init(argc, argv, "RP2040_node2"); // Initialize node called "RP2040_node2"
 	ros::NodeHandle node_handle;
 	ros::Subscriber subscriber = node_handle.subscribe("topic_actuate", 1, &callback); // Subscribe to "topic_actuate"
 

@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "robotic_quadruped_pkg")
 set(robotic_quadruped_pkg_VERSION "0.0.0")
-set(robotic_quadruped_pkg_MAINTAINER "jchoi <jchoi@todo.todo>")
+set(robotic_quadruped_pkg_MAINTAINER "jchoi <jchoi2507@gmail.com>")
 set(robotic_quadruped_pkg_PACKAGE_FORMAT "2")
 set(robotic_quadruped_pkg_BUILD_DEPENDS "roscpp" "std_msgs")
 set(robotic_quadruped_pkg_BUILD_EXPORT_DEPENDS "roscpp" "std_msgs")

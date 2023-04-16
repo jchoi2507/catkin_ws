@@ -204,8 +204,8 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-add_executable(sender_node src/sender.cpp)
-target_link_libraries(sender_node ${catkin_LIBRARIES} -lwiringPi)
+add_executable(Nicla_node src/Nicla_node.cpp)
+target_link_libraries(Nicla_node ${catkin_LIBRARIES} -lwiringPi)
 
 add_executable(RP2040_node1 src/RP2040_node1.cpp)
 target_link_libraries(RP2040_node1 ${catkin_LIBRARIES} -lwiringPi)

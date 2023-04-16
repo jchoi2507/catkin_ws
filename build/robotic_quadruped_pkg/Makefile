@@ -213,6 +213,21 @@ std_msgs_generate_messages_nodejs/fast:
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
+robotic_quadruped_pkg/CMakeFiles/Nicla_node.dir/rule:
+	cd /home/jchoi/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotic_quadruped_pkg/CMakeFiles/Nicla_node.dir/rule
+.PHONY : robotic_quadruped_pkg/CMakeFiles/Nicla_node.dir/rule
+
+# Convenience name for target.
+Nicla_node: robotic_quadruped_pkg/CMakeFiles/Nicla_node.dir/rule
+
+.PHONY : Nicla_node
+
+# fast build rule for target.
+Nicla_node/fast:
+	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/Nicla_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/Nicla_node.dir/build
+.PHONY : Nicla_node/fast
+
+# Convenience name for target.
 robotic_quadruped_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
 	cd /home/jchoi/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotic_quadruped_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : robotic_quadruped_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
@@ -271,21 +286,6 @@ roscpp_generate_messages_py: robotic_quadruped_pkg/CMakeFiles/roscpp_generate_me
 roscpp_generate_messages_py/fast:
 	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/roscpp_generate_messages_py.dir/build.make robotic_quadruped_pkg/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-robotic_quadruped_pkg/CMakeFiles/sender_node.dir/rule:
-	cd /home/jchoi/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotic_quadruped_pkg/CMakeFiles/sender_node.dir/rule
-.PHONY : robotic_quadruped_pkg/CMakeFiles/sender_node.dir/rule
-
-# Convenience name for target.
-sender_node: robotic_quadruped_pkg/CMakeFiles/sender_node.dir/rule
-
-.PHONY : sender_node
-
-# fast build rule for target.
-sender_node/fast:
-	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/sender_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/sender_node.dir/build
-.PHONY : sender_node/fast
 
 # Convenience name for target.
 robotic_quadruped_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
@@ -437,6 +437,33 @@ std_msgs_generate_messages_lisp/fast:
 	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make robotic_quadruped_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
+src/Nicla_node.o: src/Nicla_node.cpp.o
+
+.PHONY : src/Nicla_node.o
+
+# target to build an object file
+src/Nicla_node.cpp.o:
+	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/Nicla_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/Nicla_node.dir/src/Nicla_node.cpp.o
+.PHONY : src/Nicla_node.cpp.o
+
+src/Nicla_node.i: src/Nicla_node.cpp.i
+
+.PHONY : src/Nicla_node.i
+
+# target to preprocess a source file
+src/Nicla_node.cpp.i:
+	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/Nicla_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/Nicla_node.dir/src/Nicla_node.cpp.i
+.PHONY : src/Nicla_node.cpp.i
+
+src/Nicla_node.s: src/Nicla_node.cpp.s
+
+.PHONY : src/Nicla_node.s
+
+# target to generate assembly for a file
+src/Nicla_node.cpp.s:
+	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/Nicla_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/Nicla_node.dir/src/Nicla_node.cpp.s
+.PHONY : src/Nicla_node.cpp.s
+
 src/RP2040_node1.o: src/RP2040_node1.cpp.o
 
 .PHONY : src/RP2040_node1.o
@@ -491,33 +518,6 @@ src/RP2040_node2.cpp.s:
 	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/RP2040_node2.dir/build.make robotic_quadruped_pkg/CMakeFiles/RP2040_node2.dir/src/RP2040_node2.cpp.s
 .PHONY : src/RP2040_node2.cpp.s
 
-src/sender.o: src/sender.cpp.o
-
-.PHONY : src/sender.o
-
-# target to build an object file
-src/sender.cpp.o:
-	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/sender_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/sender_node.dir/src/sender.cpp.o
-.PHONY : src/sender.cpp.o
-
-src/sender.i: src/sender.cpp.i
-
-.PHONY : src/sender.i
-
-# target to preprocess a source file
-src/sender.cpp.i:
-	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/sender_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/sender_node.dir/src/sender.cpp.i
-.PHONY : src/sender.cpp.i
-
-src/sender.s: src/sender.cpp.s
-
-.PHONY : src/sender.s
-
-# target to generate assembly for a file
-src/sender.cpp.s:
-	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/sender_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/sender_node.dir/src/sender.cpp.s
-.PHONY : src/sender.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -530,11 +530,11 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... install/local"
 	@echo "... install"
+	@echo "... Nicla_node"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_py"
-	@echo "... sender_node"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
@@ -549,15 +549,15 @@ help:
 	@echo "... list_install_components"
 	@echo "... test"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... src/Nicla_node.o"
+	@echo "... src/Nicla_node.i"
+	@echo "... src/Nicla_node.s"
 	@echo "... src/RP2040_node1.o"
 	@echo "... src/RP2040_node1.i"
 	@echo "... src/RP2040_node1.s"
 	@echo "... src/RP2040_node2.o"
 	@echo "... src/RP2040_node2.i"
 	@echo "... src/RP2040_node2.s"
-	@echo "... src/sender.o"
-	@echo "... src/sender.i"
-	@echo "... src/sender.s"
 .PHONY : help
 
 
