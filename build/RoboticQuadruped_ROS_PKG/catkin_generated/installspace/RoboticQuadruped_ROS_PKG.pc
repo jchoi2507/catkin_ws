@@ -1,0 +1,8 @@
+prefix=/home/jchoi/catkin_ws/install
+
+Name: RoboticQuadruped_ROS_PKG
+Description: Description of RoboticQuadruped_ROS_PKG
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

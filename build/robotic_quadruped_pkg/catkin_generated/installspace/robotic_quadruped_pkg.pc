@@ -1,0 +1,8 @@
+prefix=/home/jchoi/catkin_ws/install
+
+Name: robotic_quadruped_pkg
+Description: Description of robotic_quadruped_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
