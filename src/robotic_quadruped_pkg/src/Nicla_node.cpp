@@ -29,6 +29,7 @@ char readSerial() {
 	while (keepReading) {
 		if (serialDataAvail(serialDeviceID) > 0) {
 			input = serialGetchar(serialDeviceID);
+			serialFlush(serialDeviceID);
 			if (input == '\n') {} // Terminating byte read, ignore current iteration
 			else {
 				ROS_INFO("Message sending: %c", input);
@@ -43,9 +44,9 @@ int main(int argc, char** argv) {
 	ros::init(argc, argv, "Nicla_node"); // Initialize node called "Nicla_node"
 	ros::NodeHandle node_handle;
 	ros::Publisher publisher = node_handle.advertise<std_msgs::Char>("topic_actuate", 1); // Topic name, publisher queue size
-	ros::Rate rate(10); // 10 Hz
+	ros::Rate rate(100); // 100 Hz
 
-	if (serialDeviceID == -1) {std::cerr << "Unable to open serial device." << std::endl; return 1;}
+	if (serialDeviceID == -1) {ROS_ERROR("Unable to open serial device."); return 1;}
 	std_msgs::Char msg; // This var is the actual message being sent to the topic
 	bool keepReading = true; // This var determines when to stop reading from serial
 
@@ -53,7 +54,7 @@ int main(int argc, char** argv) {
 		msg.data = readSerial();
 		publisher.publish(msg);
 		ros::spinOnce(); // Allows for backend to update on every iteration
-		rate.sleep();  // Maintains the 10 Hz message publishing rate
+		rate.sleep();  // Maintains the 100 Hz message publishing rate
 	}
 	return 0;
 }
