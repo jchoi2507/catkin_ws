@@ -19,7 +19,7 @@ Date: 4/15/2023
 using namespace std;
 
 /* Serial USB Connection from Arduino Nicla Setup */
-const char *port_connection = "/dev/tty[SOMETHING]";
+const char *port_connection = "/dev/ttyACM1";
 int baudrate = 9600;
 int serialDeviceID = serialOpen(port_connection, baudrate);
 
