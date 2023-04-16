@@ -27,21 +27,26 @@ int main(int argc, char** argv) {
 	ros::init(argc, argv, "Nicla_node"); // Initialize node called "Nicla_node"
 	ros::NodeHandle node_handle;
 	ros::Publisher publisher = node_handle.advertise<std_msgs::Char>("topic_actuate", 1); // Topic name, publisher queue size
-	//ros::Rate rate(10); // 10 Hz
+	ros::Rate rate(10); // 10 Hz
 
 	if (serialDeviceID == -1) {std::cerr << "Unable to open serial device." << std::endl; return 1;}
-	std_msgs::Char msg; // This will store the serially transmitted char from the Nicla
+	std_msgs::Char msg; // This var will store the serially transmitted char from the Nicla
+	bool keepReading = true; // This var determines when to stop reading from serial
 
-	while(ros::ok()) {
-		if (serialDataAvail(serialDeviceID) > 0) {
-			msg.data = serialGetchar(serialDeviceID);
-			if (msg.data == '\n') {} // Terminating byte read, ignore current iteration
-			else {
-				publisher.publish(msg);
+	while (ros::ok()) {
+		while (keepReading) {
+			if (serialDataAvail(serialDeviceID) > 0) {
+				msg.data = serialGetchar(serialDeviceID);
+				if (msg.data == '\n') {} // Terminating byte read, ignore current iteration
+				else {
+					keepReading = false;
+				}
 			}
 		}
+		publisher.publish(msg);
+		keepReading = true;
 		ros::spinOnce(); // Allows for backend to update on every iteration
-		//rate.sleep();  // Maintains the 10 messages/second frequency rate
+		rate.sleep();  // Maintains the 10 Hz message publishing rate
 	}
 	return 0;
 }
