@@ -1,5 +1,5 @@
 /*
-keyboard_control.cpp
+keyboard_node.cpp
 By: Jacob Choi
 Date: 4/18/2023
 
@@ -28,11 +28,13 @@ int main(int argc, char** argv) {
 	std::string input; // cin input stream variable
 	std_msgs::Char msg; // message-type variable to publish to topic
 
+	ROS_INFO("f/s/r/l/d");
+
 	while (ros::ok()) {
-		ROS_INFO("f/s/r/l/d");
 		std::cin >> input;
 		msg.data = input[0]; // Converting <string> to <char>
 		publisher.publish(msg);
+		ROS_INFO("Message sent: %c", msg.data);
 		ros::spinOnce();
 		rate.sleep();
 	}
