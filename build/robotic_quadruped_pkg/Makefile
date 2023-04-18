@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+robotic_quadruped_pkg/CMakeFiles/keyboard_node.dir/rule:
+	cd /home/jchoi/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotic_quadruped_pkg/CMakeFiles/keyboard_node.dir/rule
+.PHONY : robotic_quadruped_pkg/CMakeFiles/keyboard_node.dir/rule
+
+# Convenience name for target.
+keyboard_node: robotic_quadruped_pkg/CMakeFiles/keyboard_node.dir/rule
+
+.PHONY : keyboard_node
+
+# fast build rule for target.
+keyboard_node/fast:
+	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/keyboard_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/keyboard_node.dir/build
+.PHONY : keyboard_node/fast
+
+# Convenience name for target.
 robotic_quadruped_pkg/CMakeFiles/RP2040_node1.dir/rule:
 	cd /home/jchoi/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotic_quadruped_pkg/CMakeFiles/RP2040_node1.dir/rule
 .PHONY : robotic_quadruped_pkg/CMakeFiles/RP2040_node1.dir/rule
@@ -518,6 +533,33 @@ src/RP2040_node2.cpp.s:
 	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/RP2040_node2.dir/build.make robotic_quadruped_pkg/CMakeFiles/RP2040_node2.dir/src/RP2040_node2.cpp.s
 .PHONY : src/RP2040_node2.cpp.s
 
+src/keyboard_node.o: src/keyboard_node.cpp.o
+
+.PHONY : src/keyboard_node.o
+
+# target to build an object file
+src/keyboard_node.cpp.o:
+	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/keyboard_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/keyboard_node.dir/src/keyboard_node.cpp.o
+.PHONY : src/keyboard_node.cpp.o
+
+src/keyboard_node.i: src/keyboard_node.cpp.i
+
+.PHONY : src/keyboard_node.i
+
+# target to preprocess a source file
+src/keyboard_node.cpp.i:
+	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/keyboard_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/keyboard_node.dir/src/keyboard_node.cpp.i
+.PHONY : src/keyboard_node.cpp.i
+
+src/keyboard_node.s: src/keyboard_node.cpp.s
+
+.PHONY : src/keyboard_node.s
+
+# target to generate assembly for a file
+src/keyboard_node.cpp.s:
+	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/keyboard_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/keyboard_node.dir/src/keyboard_node.cpp.s
+.PHONY : src/keyboard_node.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -525,6 +567,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... keyboard_node"
 	@echo "... RP2040_node1"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_nodejs"
@@ -558,6 +601,9 @@ help:
 	@echo "... src/RP2040_node2.o"
 	@echo "... src/RP2040_node2.i"
 	@echo "... src/RP2040_node2.s"
+	@echo "... src/keyboard_node.o"
+	@echo "... src/keyboard_node.i"
+	@echo "... src/keyboard_node.s"
 .PHONY : help
 
 

@@ -19,7 +19,7 @@ Date: 4/15/2023
 using namespace std;
 
 /* Serial USB Connection to RP2040 Setup */
-const char *port_connection = "/dev/tty[SOMETHING]"; // Initialize RP2040 <-> RPi 4b USB port connection
+const char *port_connection = "/dev/ttyACM1"; // Initialize RP2040 <-> RPi 4b USB port connection
 				      	      // To figure this out, "clever stack overflow" trick: 1) BEFORE PLUGIN: ls -l /dev > dev.txt
 					      //                                                    2) AFTER PLUG IN: ls -l /dev > dev2.txt
 					      //                                                    3) Diff the two text files 

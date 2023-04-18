@@ -212,3 +212,6 @@ target_link_libraries(RP2040_node1 ${catkin_LIBRARIES} -lwiringPi)
 
 add_executable(RP2040_node2 src/RP2040_node2.cpp)
 target_link_libraries(RP2040_node2 ${catkin_LIBRARIES} -lwiringPi)
+
+add_executable(keyboard_node src/keyboard_node.cpp)
+target_link_libraries(keyboard_node ${catkin_LIBRARIES})
