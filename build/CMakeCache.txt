@@ -370,17 +370,11 @@ Project_SOURCE_DIR:STATIC=/home/jchoi/catkin_ws/src
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/arm-linux-gnueabihf/librt.so
 
-//Value Computed by CMake
-RoboticQuadruped_ROS_PKG_BINARY_DIR:STATIC=/home/jchoi/catkin_ws/build/RoboticQuadruped_ROS_PKG
-
-//Value Computed by CMake
-RoboticQuadruped_ROS_PKG_SOURCE_DIR:STATIC=/home/jchoi/catkin_ws/src/RoboticQuadruped_ROS_PKG
-
 //Enable debian style python package layout
 SETUPTOOLS_DEB_LAYOUT:BOOL=ON
 
 //Name of the computer/site where compile is being run
-SITE:STRING=raspberrypi
+SITE:STRING=jchoiraspberrypi
 
 //LSB Distrib tag
 UBUNTU:BOOL=TRUE

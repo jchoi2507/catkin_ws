@@ -1,0 +1,13 @@
+<launch>
+	<node pkg="robotic_quadruped_pkg" type="Nicla_node" name="Nicla_node">
+	</node>
+
+	<node pkg="robotic_quadruped_pkg" type="RP2040_node1" name="RP2040_node1">
+	</node>
+
+	<node pkg="robotic_quadruped_pkg" type="RP2040_node2" name="RP2040_node2">
+	</node>
+
+	<node pkg="robotic_quadruped_pkg" type="keyboard_node" name="keyboard_node">
+	</node>
+</launch>
