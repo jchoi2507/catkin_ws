@@ -19,7 +19,7 @@ Date: 4/15/2023
 using namespace std;
 
 /* Serial USB Connection from Arduino Nicla Setup */
-const char *port_connection = "/dev/ttyACM1";
+const char *port_connection = "/dev/ttyACM2";
 int baudrate = 9600;
 int serialDeviceID = serialOpen(port_connection, baudrate);
 
@@ -32,7 +32,7 @@ char readSerial() {
 			serialFlush(serialDeviceID);
 			if (input == '\n') {} // Terminating byte read, ignore current iteration
 			else {
-				ROS_INFO("Message sending: %c", input);
+				ROS_INFO("Message Sent: %c", input);
 				keepReading = false;
 			}
 		}
@@ -52,6 +52,8 @@ int main(int argc, char** argv) {
 
 	while (ros::ok()) {
 		msg.data = readSerial();
+		while (publisher.getNumSubscribers() < 2) {} // Ensures the first published messages are not lost while the subscriber
+						             // nodes initialize
 		publisher.publish(msg);
 		ros::spinOnce(); // Allows for backend to update on every iteration
 		rate.sleep();  // Maintains the 100 Hz message publishing rate

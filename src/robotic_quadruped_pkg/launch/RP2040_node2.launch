@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="robotic_quadruped_pkg" type="RP2040_node2" name="RP2040_node2">
+	</node>
+</launch>
