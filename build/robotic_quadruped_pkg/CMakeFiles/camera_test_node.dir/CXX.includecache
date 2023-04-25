@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jchoi/catkin_ws/src/robotic_quadruped_pkg/src/camera_servo_test.cpp
+wiringPi.h
+-
+unistd.h
+-
+iostream
+-
+

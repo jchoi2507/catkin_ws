@@ -9,18 +9,20 @@ Date: 4/18/2023
 	- 'r' input: turn right
 	- 'l' input: turn left
 	- 'd' input: dance!
+	- 'i'/'k' inputs: rotate camera servo up/down
+	- 'j'/'l' inputs: rotate camera servo left/right
 - Under the hood: publishes appropriate character to the topic: /topic_actuate
 */
 
 #include <ros/ros.h>
 #include <std_msgs/Char.h>
+#include <wiringPi.h>
 #include <iostream>
 #include <string>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	/* ROS Publisher Node Setup */
 	ros::init(argc, argv, "keyboard_node");
 	ros::NodeHandle node_handle;
 	ros::Publisher publisher = node_handle.advertise<std_msgs::Char>("topic_actuate", 1);
@@ -29,15 +31,16 @@ int main(int argc, char** argv) {
 	std::string input; // cin input stream variable
 	std_msgs::Char msg; // message-type variable to publish to topic
 
-	while (ros::ok()) {
-		ROS_INFO("Leg Actuation: f/s/r/l/d");
+	wiringPiSetup();
+	pinMode(13, PWM_OUTPUT);
 
+	ROS_INFO("f/s/r/l/d");
+
+	while (ros::ok()) {
 		std::cin >> input;
 		msg.data = input[0]; // Converting <string> to <char>
-
 		publisher.publish(msg);
 		ROS_INFO("Message sent: %c", msg.data);
-
 		ros::spinOnce();
 		rate.sleep();
 	}

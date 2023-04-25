@@ -36,6 +36,7 @@
 /home/jchoi/catkin_ws/build/gtest/googletest/CMakeFiles/gtest_main.dir
 /home/jchoi/catkin_ws/build/gtest/googletest/CMakeFiles/gtest.dir
 /home/jchoi/catkin_ws/build/robotic_quadruped_pkg/CMakeFiles/edit_cache.dir
+/home/jchoi/catkin_ws/build/robotic_quadruped_pkg/CMakeFiles/camera_servo_node.dir
 /home/jchoi/catkin_ws/build/robotic_quadruped_pkg/CMakeFiles/keyboard_node.dir
 /home/jchoi/catkin_ws/build/robotic_quadruped_pkg/CMakeFiles/RP2040_node1.dir
 /home/jchoi/catkin_ws/build/robotic_quadruped_pkg/CMakeFiles/std_msgs_generate_messages_py.dir

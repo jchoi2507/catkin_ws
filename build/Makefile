@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named camera_servo_node
+
+# Build rule for target.
+camera_servo_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 camera_servo_node
+.PHONY : camera_servo_node
+
+# fast build rule for target.
+camera_servo_node/fast:
+	$(MAKE) -f robotic_quadruped_pkg/CMakeFiles/camera_servo_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/camera_servo_node.dir/build
+.PHONY : camera_servo_node/fast
+
+#=============================================================================
 # Target rules for targets named keyboard_node
 
 # Build rule for target.
@@ -553,6 +566,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... camera_servo_node"
 	@echo "... keyboard_node"
 	@echo "... RP2040_node1"
 	@echo "... std_msgs_generate_messages_py"

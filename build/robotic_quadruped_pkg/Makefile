@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+robotic_quadruped_pkg/CMakeFiles/camera_servo_node.dir/rule:
+	cd /home/jchoi/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotic_quadruped_pkg/CMakeFiles/camera_servo_node.dir/rule
+.PHONY : robotic_quadruped_pkg/CMakeFiles/camera_servo_node.dir/rule
+
+# Convenience name for target.
+camera_servo_node: robotic_quadruped_pkg/CMakeFiles/camera_servo_node.dir/rule
+
+.PHONY : camera_servo_node
+
+# fast build rule for target.
+camera_servo_node/fast:
+	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/camera_servo_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/camera_servo_node.dir/build
+.PHONY : camera_servo_node/fast
+
+# Convenience name for target.
 robotic_quadruped_pkg/CMakeFiles/keyboard_node.dir/rule:
 	cd /home/jchoi/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotic_quadruped_pkg/CMakeFiles/keyboard_node.dir/rule
 .PHONY : robotic_quadruped_pkg/CMakeFiles/keyboard_node.dir/rule
@@ -533,6 +548,33 @@ src/RP2040_node2.cpp.s:
 	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/RP2040_node2.dir/build.make robotic_quadruped_pkg/CMakeFiles/RP2040_node2.dir/src/RP2040_node2.cpp.s
 .PHONY : src/RP2040_node2.cpp.s
 
+src/camera_servo_node.o: src/camera_servo_node.cpp.o
+
+.PHONY : src/camera_servo_node.o
+
+# target to build an object file
+src/camera_servo_node.cpp.o:
+	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/camera_servo_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/camera_servo_node.dir/src/camera_servo_node.cpp.o
+.PHONY : src/camera_servo_node.cpp.o
+
+src/camera_servo_node.i: src/camera_servo_node.cpp.i
+
+.PHONY : src/camera_servo_node.i
+
+# target to preprocess a source file
+src/camera_servo_node.cpp.i:
+	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/camera_servo_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/camera_servo_node.dir/src/camera_servo_node.cpp.i
+.PHONY : src/camera_servo_node.cpp.i
+
+src/camera_servo_node.s: src/camera_servo_node.cpp.s
+
+.PHONY : src/camera_servo_node.s
+
+# target to generate assembly for a file
+src/camera_servo_node.cpp.s:
+	cd /home/jchoi/catkin_ws/build && $(MAKE) -f robotic_quadruped_pkg/CMakeFiles/camera_servo_node.dir/build.make robotic_quadruped_pkg/CMakeFiles/camera_servo_node.dir/src/camera_servo_node.cpp.s
+.PHONY : src/camera_servo_node.cpp.s
+
 src/keyboard_node.o: src/keyboard_node.cpp.o
 
 .PHONY : src/keyboard_node.o
@@ -567,6 +609,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... camera_servo_node"
 	@echo "... keyboard_node"
 	@echo "... RP2040_node1"
 	@echo "... std_msgs_generate_messages_py"
@@ -601,6 +644,9 @@ help:
 	@echo "... src/RP2040_node2.o"
 	@echo "... src/RP2040_node2.i"
 	@echo "... src/RP2040_node2.s"
+	@echo "... src/camera_servo_node.o"
+	@echo "... src/camera_servo_node.i"
+	@echo "... src/camera_servo_node.s"
 	@echo "... src/keyboard_node.o"
 	@echo "... src/keyboard_node.i"
 	@echo "... src/keyboard_node.s"
