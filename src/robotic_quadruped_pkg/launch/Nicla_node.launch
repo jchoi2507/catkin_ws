@@ -1,4 +1,0 @@
-<launch>
-	<node pkg="robotic_quadruped_pkg" type="Nicla_node" name="Nicla_node">
-	</node>
-</launch>

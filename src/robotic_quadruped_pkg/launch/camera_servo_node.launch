@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="robotic_quadruped_pkg" type="camera_servo_node" name="camera_servo_node">
+	</node>
+</launch>

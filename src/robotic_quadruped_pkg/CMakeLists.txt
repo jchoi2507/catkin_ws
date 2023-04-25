@@ -217,4 +217,4 @@ add_executable(keyboard_node src/keyboard_node.cpp)
 target_link_libraries(keyboard_node ${catkin_LIBRARIES} -lwiringPi)
 
 add_executable(camera_servo_node src/camera_servo_node.cpp)
-target_link_libraries(camera_servo_node ${catkin_LIBRARIES} -lpigpio)
+target_link_libraries(camera_servo_node ${catkin_LIBRARIES} -lpigpio -lrt)
