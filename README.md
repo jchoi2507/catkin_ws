@@ -1,3 +1,4 @@
+My ROS1 Noetic catkin workspace mainly for [this project](https://github.com/jchoi2507/Robotic_Quadruped)
 # Environment Setup
 
 1. Because my setup was headless (monitorless) and the server image (desktopless) of Ubuntu was flashed onto the Raspberry Pi, opening multiple terminals for different nodes was done with a terminal multiplexer, [tmux](https://github.com/tmux/tmux/wiki):
