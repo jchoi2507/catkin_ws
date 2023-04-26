@@ -49,6 +49,8 @@ int main(int argc, char** argv) {
 		actuateServos(input);
 		usleep(1000000);
 	}
+
+	gpioTerminate();
 	return 0;
 }
 
